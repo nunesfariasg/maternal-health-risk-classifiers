@@ -1,0 +1,70 @@
+{
+  "alpha": 0.05,
+  "kruskal_wallis": {
+    "statistic_h": 1.7627599962009481,
+    "pvalue": 0.6230721091566791
+  },
+  "mann_whitney": [
+    {
+      "a": "KNN",
+      "b": "SVM",
+      "statistic_u": 42.5,
+      "pvalue": 0.5933483475682366,
+      "p_bonferroni": 1.0,
+      "significant_raw": false,
+      "significant_bonferroni": false,
+      "mean_difference_a_minus_b": -0.009734513274336165
+    },
+    {
+      "a": "KNN",
+      "b": "AD",
+      "statistic_u": 35.0,
+      "pvalue": 0.26775561423655403,
+      "p_bonferroni": 1.0,
+      "significant_raw": false,
+      "significant_bonferroni": false,
+      "mean_difference_a_minus_b": -0.02035398230088492
+    },
+    {
+      "a": "KNN",
+      "b": "MLP",
+      "statistic_u": 36.5,
+      "pvalue": 0.3228233890194294,
+      "p_bonferroni": 1.0,
+      "significant_raw": false,
+      "significant_bonferroni": false,
+      "mean_difference_a_minus_b": -0.018584070796460295
+    },
+    {
+      "a": "SVM",
+      "b": "AD",
+      "statistic_u": 41.5,
+      "pvalue": 0.5422977534439449,
+      "p_bonferroni": 1.0,
+      "significant_raw": false,
+      "significant_bonferroni": false,
+      "mean_difference_a_minus_b": -0.010619469026548756
+    },
+    {
+      "a": "SVM",
+      "b": "MLP",
+      "statistic_u": 42.5,
+      "pvalue": 0.5941943686734962,
+      "p_bonferroni": 1.0,
+      "significant_raw": false,
+      "significant_bonferroni": false,
+      "mean_difference_a_minus_b": -0.00884955752212413
+    },
+    {
+      "a": "AD",
+      "b": "MLP",
+      "statistic_u": 52.0,
+      "pvalue": 0.909003737343943,
+      "p_bonferroni": 1.0,
+      "significant_raw": false,
+      "significant_bonferroni": false,
+      "mean_difference_a_minus_b": 0.001769911504424626
+    }
+  ],
+  "caveat": "Partições compartilhadas e repetições sobrepostas: os escores não são independentes; inferência exploratória conforme o enunciado."
+}

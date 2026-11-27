@@ -1,5 +1,12 @@
 # Avaliação 2º Bimestre — Comparação de Classificadores (Grupo 2)
 
+**Implementação executada:** consulte [instalação e execução](docs/EXECUCAO.md),
+[relatório PDF](report/relatorio.pdf), [roteiro de apresentação](report/apresentacao.md),
+[validações](docs/VALIDACAO.md) e [proposta de PR](docs/PROPOSTA_PR.md).
+Os resultados em `results/` são reais, obtidos com as sementes 0 a 9.
+Para gerar o ZIP exigido, execute `python scripts/package_delivery.py` após instalar
+as dependências. A saída fica em `dist/`, sem ambiente virtual ou arquivos temporários.
+
 > **Para assistentes de IA:** este README é o contexto oficial do projeto. Ele resume o enunciado do professor, as restrições obrigatórias, a base de dados do grupo e as decisões de implementação. Ao gerar código, texto do relatório ou explicações, siga as **Regras obrigatórias** abaixo. Idioma de trabalho: **português do Brasil**.
 
 ## 1. Informações gerais
@@ -120,14 +127,18 @@ Para cada uma das **10 repetições** (uma semente aleatória diferente por repe
 
 ## 8. Decisões do grupo (preencher conforme o trabalho avança)
 
-- **Linguagem/tecnologias:** Python + scikit-learn, pandas, numpy, scipy, matplotlib/seaborn (confirmar).
-- **Tratamento de duplicatas:** _a definir_
-- **Normalização:** _a definir_ (sugestão: `StandardScaler`, ajustado só no treino)
-- **Grade KNN:** _a definir_
-- **Grade AD:** _a definir_
-- **Grade SVM:** _a definir_
-- **Grade MLP:** _a definir_
-- **Sementes:** _a definir_ (sugestão: seeds 0 a 9, registradas para reprodutibilidade)
+Escolhas adotadas nesta implementação, sujeitas à revisão da equipe antes da PR:
+
+- **Linguagem/tecnologias:** Python 3.14.6, scikit-learn, pandas, numpy, scipy e matplotlib; versões em `requirements.txt` e `results/metadata.json`.
+- **Tratamento de duplicatas:** remover as 562 repetições exatas dos 1.014 registros, considerando atributos e alvo; usar 452 linhas. Manter e documentar 35 grupos de atributos com rótulos conflitantes. Não remover extremos por suposição clínica.
+- **Normalização:** `StandardScaler` dentro de `Pipeline`, ajustado só no treino para KNN, SVM e MLP. AD sem padronização.
+- **Grade KNN:** K = 3, 5, 7, 11; pesos `uniform` e `distance` (8 candidatos).
+- **Grade AD:** `criterion` = `gini`, `entropy`; `ccp_alpha` = 0, 0.005, 0.02 (6 candidatos).
+- **Grade SVM:** C = 0.1, 1, 10; kernel `poly`, `rbf`; `gamma='scale'`, `degree=3` fixos (6 candidatos).
+- **Grade MLP:** épocas 200, 500; taxa 0.001, 0.01; camadas `(16,)`, `(16, 8)`; ativações `identity`, `logistic`, `tanh`, `relu` (32 candidatos). Adam, `early_stopping=False`, `tol=0`, `n_iter_no_change=501`; avisos registrados.
+- **Sementes:** 0 a 9; mesmas partições para todos os modelos em cada repetição. Treino/validação/teste: 226/113/113.
+- **Seleção:** maior acurácia de validação, primeiro candidato da `ParameterGrid` em empate; sem reajuste em treino+validação. As grades foram fixadas antes das avaliações no teste.
+- **Estatística:** DP amostral (`ddof=1`), alpha=0.05, seis Mann-Whitney bilaterais assintóticos e Bonferroni adicional. Os escores são dependentes por desenho; interpretar p-valores como exploração exigida pelo enunciado.
 
 ## 9. Estrutura sugerida do repositório
 
@@ -185,18 +196,18 @@ Formato: modelo de publicações da SBC (https://www.sbc.org.br/documentosinstit
 
 ## 11. Checklist
 
-- [ ] Base carregada e explorada (duplicatas, outliers, distribuição das classes)
-- [ ] Divisão estratificada 50/25/25, embaralhada e aleatória
-- [ ] Normalização ajustada apenas no treino
-- [ ] Grades de hiperparâmetros definidas para KNN, AD, SVM e MLP
-- [ ] Seleção de parâmetros feita **somente** na validação
-- [ ] 10 repetições executadas, acurácias de teste salvas
-- [ ] Média e DP calculados
-- [ ] Kruskal-Wallis executado
-- [ ] Mann-Whitney em todos os pares executado
-- [ ] Relatório SBC em PDF (com todos os integrantes)
-- [ ] Zip do código com o nome no padrão correto
-- [ ] Apresentação de 20 min preparada
+- [x] Base carregada e explorada (duplicatas, outliers, distribuição das classes)
+- [x] Divisão estratificada 50/25/25, embaralhada e aleatória
+- [x] Normalização ajustada apenas no treino
+- [x] Grades de hiperparâmetros definidas para KNN, AD, SVM e MLP
+- [x] Seleção de parâmetros feita **somente** na validação
+- [x] 10 repetições executadas, acurácias de teste salvas
+- [x] Média e DP calculados
+- [x] Kruskal-Wallis executado
+- [x] Mann-Whitney em todos os pares executado
+- [x] Relatório PDF com diagramação SBC e todos os integrantes; conferir com o modelo específico do professor
+- [x] ZIP do código gerado; confirmar grafia e sobrenomes antes da entrega
+- [x] Roteiro de apresentação de 20 min preparado; ensaio individual pendente
 - [ ] Entrega no Classroom até **27/11/2026**
 
 ## 12. Instruções para assistentes de IA
@@ -208,3 +219,18 @@ Formato: modelo de publicações da SBC (https://www.sbc.org.br/documentosinstit
 - Mantenha o código simples e legível: o grupo precisa explicar tudo na arguição individual.
 - Ao escrever trechos do relatório, seja claro e explique cada etapa; não invente resultados numéricos: use apenas valores produzidos pelos experimentos.
 - Valores marcados como _a definir_ ou "confirmar" ainda não foram decididos ou verificados pelo grupo.
+
+## 13. Resultado da execução
+
+| Classificador | Acurácia média | DP amostral (p.p.) |
+| --- | --- | --- |
+| KNN | 66,28% | 3,58 |
+| SVM | 67,26% | 3,36 |
+| AD | 68,32% | 2,50 |
+| MLP | 68,14% | 2,67 |
+
+Kruskal-Wallis: H=1,76276, p=0,62307. Nenhum dos seis Mann-Whitney rejeitou H0
+a 5%, mesmo antes de Bonferroni. AD teve a maior média descritiva; os testes não
+demonstraram superioridade nem equivalência. A dependência entre escores limita a
+inferência, conforme discutido no relatório. O roteiro está preparado; o ensaio
+individual e a submissão no Classroom dependem da equipe.

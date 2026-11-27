@@ -1,0 +1,41 @@
+seed,classifier,params,validation_accuracy,test_accuracy
+0,KNN,"{""model__n_neighbors"": 11, ""model__weights"": ""uniform""}",0.7522123893805309,0.6283185840707964
+0,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.7610619469026548,0.6283185840707964
+0,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""gini""}",0.7256637168141593,0.6637168141592921
+0,MLP,"{""model__activation"": ""relu"", ""model__hidden_layer_sizes"": [16], ""model__learning_rate_init"": 0.001, ""model__max_iter"": 500}",0.7787610619469026,0.6637168141592921
+1,KNN,"{""model__n_neighbors"": 7, ""model__weights"": ""uniform""}",0.7168141592920354,0.6548672566371682
+1,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.6991150442477876,0.6548672566371682
+1,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""entropy""}",0.7079646017699115,0.672566371681416
+1,MLP,"{""model__activation"": ""tanh"", ""model__hidden_layer_sizes"": [16, 8], ""model__learning_rate_init"": 0.001, ""model__max_iter"": 500}",0.7345132743362832,0.6460176991150443
+2,KNN,"{""model__n_neighbors"": 7, ""model__weights"": ""uniform""}",0.7079646017699115,0.584070796460177
+2,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.7345132743362832,0.6371681415929203
+2,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""gini""}",0.7522123893805309,0.6460176991150443
+2,MLP,"{""model__activation"": ""logistic"", ""model__hidden_layer_sizes"": [16], ""model__learning_rate_init"": 0.01, ""model__max_iter"": 500}",0.7345132743362832,0.6460176991150443
+3,KNN,"{""model__n_neighbors"": 5, ""model__weights"": ""uniform""}",0.6548672566371682,0.7079646017699115
+3,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.6548672566371682,0.6814159292035398
+3,AD,"{""model__ccp_alpha"": 0.005, ""model__criterion"": ""gini""}",0.6460176991150443,0.6548672566371682
+3,MLP,"{""model__activation"": ""tanh"", ""model__hidden_layer_sizes"": [16, 8], ""model__learning_rate_init"": 0.001, ""model__max_iter"": 500}",0.6814159292035398,0.7256637168141593
+4,KNN,"{""model__n_neighbors"": 5, ""model__weights"": ""uniform""}",0.6194690265486725,0.672566371681416
+4,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.672566371681416,0.6991150442477876
+4,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""entropy""}",0.7168141592920354,0.6902654867256637
+4,MLP,"{""model__activation"": ""tanh"", ""model__hidden_layer_sizes"": [16, 8], ""model__learning_rate_init"": 0.001, ""model__max_iter"": 200}",0.6991150442477876,0.6991150442477876
+5,KNN,"{""model__n_neighbors"": 5, ""model__weights"": ""uniform""}",0.7079646017699115,0.6548672566371682
+5,SVM,"{""model__C"": 10.0, ""model__kernel"": ""rbf""}",0.7168141592920354,0.6283185840707964
+5,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""gini""}",0.7168141592920354,0.6991150442477876
+5,MLP,"{""model__activation"": ""tanh"", ""model__hidden_layer_sizes"": [16], ""model__learning_rate_init"": 0.01, ""model__max_iter"": 200}",0.7168141592920354,0.6637168141592921
+6,KNN,"{""model__n_neighbors"": 11, ""model__weights"": ""uniform""}",0.6902654867256637,0.672566371681416
+6,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.672566371681416,0.7168141592920354
+6,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""gini""}",0.7168141592920354,0.7168141592920354
+6,MLP,"{""model__activation"": ""logistic"", ""model__hidden_layer_sizes"": [16], ""model__learning_rate_init"": 0.01, ""model__max_iter"": 200}",0.7079646017699115,0.6814159292035398
+7,KNN,"{""model__n_neighbors"": 11, ""model__weights"": ""uniform""}",0.7079646017699115,0.6991150442477876
+7,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.7168141592920354,0.672566371681416
+7,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""gini""}",0.7168141592920354,0.7168141592920354
+7,MLP,"{""model__activation"": ""tanh"", ""model__hidden_layer_sizes"": [16, 8], ""model__learning_rate_init"": 0.001, ""model__max_iter"": 500}",0.7522123893805309,0.6991150442477876
+8,KNN,"{""model__n_neighbors"": 11, ""model__weights"": ""uniform""}",0.7079646017699115,0.672566371681416
+8,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.7168141592920354,0.6991150442477876
+8,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""gini""}",0.7256637168141593,0.6991150442477876
+8,MLP,"{""model__activation"": ""tanh"", ""model__hidden_layer_sizes"": [16, 8], ""model__learning_rate_init"": 0.001, ""model__max_iter"": 500}",0.7522123893805309,0.6814159292035398
+9,KNN,"{""model__n_neighbors"": 11, ""model__weights"": ""uniform""}",0.6902654867256637,0.6814159292035398
+9,SVM,"{""model__C"": 1.0, ""model__kernel"": ""rbf""}",0.6991150442477876,0.7079646017699115
+9,AD,"{""model__ccp_alpha"": 0.02, ""model__criterion"": ""gini""}",0.7256637168141593,0.672566371681416
+9,MLP,"{""model__activation"": ""relu"", ""model__hidden_layer_sizes"": [16], ""model__learning_rate_init"": 0.001, ""model__max_iter"": 200}",0.7079646017699115,0.7079646017699115
