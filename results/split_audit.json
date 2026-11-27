@@ -1,0 +1,252 @@
+[
+  {
+    "seed": 0,
+    "feature_vector_overlap": {
+      "train_validation": 9,
+      "train_test": 10,
+      "validation_test": 6
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      },
+      "test": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "feature_vector_overlap": {
+      "train_validation": 10,
+      "train_test": 9,
+      "validation_test": 6
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      },
+      "test": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "feature_vector_overlap": {
+      "train_validation": 6,
+      "train_test": 7,
+      "validation_test": 10
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      },
+      "test": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "feature_vector_overlap": {
+      "train_validation": 7,
+      "train_test": 7,
+      "validation_test": 6
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      },
+      "test": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "feature_vector_overlap": {
+      "train_validation": 13,
+      "train_test": 10,
+      "validation_test": 2
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      },
+      "test": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      }
+    }
+  },
+  {
+    "seed": 5,
+    "feature_vector_overlap": {
+      "train_validation": 8,
+      "train_test": 7,
+      "validation_test": 4
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      },
+      "test": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      }
+    }
+  },
+  {
+    "seed": 6,
+    "feature_vector_overlap": {
+      "train_validation": 8,
+      "train_test": 10,
+      "validation_test": 3
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      },
+      "test": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "feature_vector_overlap": {
+      "train_validation": 8,
+      "train_test": 8,
+      "validation_test": 4
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      },
+      "test": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      }
+    }
+  },
+  {
+    "seed": 8,
+    "feature_vector_overlap": {
+      "train_validation": 7,
+      "train_test": 10,
+      "validation_test": 4
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      },
+      "test": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      }
+    }
+  },
+  {
+    "seed": 9,
+    "feature_vector_overlap": {
+      "train_validation": 9,
+      "train_test": 7,
+      "validation_test": 5
+    },
+    "class_counts": {
+      "train": {
+        "low risk": 117,
+        "high risk": 56,
+        "mid risk": 53
+      },
+      "validation": {
+        "low risk": 59,
+        "high risk": 28,
+        "mid risk": 26
+      },
+      "test": {
+        "low risk": 58,
+        "high risk": 28,
+        "mid risk": 27
+      }
+    }
+  }
+]

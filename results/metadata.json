@@ -1,0 +1,97 @@
+{
+  "created_utc": "2026-11-27T01:06:15.928596+00:00",
+  "elapsed_seconds": 106.02929269999731,
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "threadpoolctl": "3.8.0"
+  },
+  "source_sha256": {
+    "src\\__init__.py": "d35f2ab00926543dbfb3c7da73c6acc61b031801eca8904de759cbb2727445e7",
+    "src\\data.py": "42c32a74ef2a508da1c13b5634705fee8a0be6ee64594771fa47a8bf1a0c7f43",
+    "src\\experiment.py": "ddce40552df35ba31e4388a8337f0de8393205ad6fed775d03ff2f5f08c4755d",
+    "src\\models.py": "c3b30152bf51f89e706590a39706585bc2f902232314bf4d7221ba7824bb1bfc",
+    "src\\stats.py": "c068ab27e303025644a73022ce9215a0a6f2ab99205f9967158cf515075b56d2"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "grids": {
+    "KNN": {
+      "model__n_neighbors": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "model__weights": [
+        "uniform",
+        "distance"
+      ]
+    },
+    "AD": {
+      "model__criterion": [
+        "gini",
+        "entropy"
+      ],
+      "model__ccp_alpha": [
+        0.0,
+        0.005,
+        0.02
+      ]
+    },
+    "SVM": {
+      "model__C": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "model__kernel": [
+        "poly",
+        "rbf"
+      ]
+    },
+    "MLP": {
+      "model__max_iter": [
+        200,
+        500
+      ],
+      "model__learning_rate_init": [
+        0.001,
+        0.01
+      ],
+      "model__hidden_layer_sizes": [
+        [
+          16
+        ],
+        [
+          16,
+          8
+        ]
+      ],
+      "model__activation": [
+        "identity",
+        "logistic",
+        "tanh",
+        "relu"
+      ]
+    }
+  },
+  "threads": 1,
+  "refit_train_plus_validation": false,
+  "tie_break": "Primeiro candidato da ParameterGrid com máxima acurácia na validação."
+}
